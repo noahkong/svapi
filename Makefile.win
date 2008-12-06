@@ -1,0 +1,48 @@
+# Project: DemoEstereo
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = source/config.o source/gui.o source/main.o source/ocv.o source/ogl.o source/svapi.o source/wrapper.o $(RES)
+LINKOBJ  = source/config.o source/gui.o source/main.o source/ocv.o source/ogl.o source/svapi.o source/wrapper.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Archivos de programa/OpenCV/lib" -L"C:/Dev-Cpp/DShow/lib" -L"C:/GTK/lib" -L"C:/Dev-Cpp/DShow/lib" -L"C:/Archivos de programa/OpenCV/lib" -L"C:/GTK/lib" -L"C:/GTK/lib/gtk-2.0/include" -L"C:/Dev-Cpp/lib" -L"include" -lgtk-win32-2.0 -win32-2.0  -lgdk-win32-2.0  -latk-1.0  -lgdk_pixbuf-2.0  -lpangowin32-1.0  -lgdi32  -lpango-1.0  -lgobject-2.0  -lgmodule-2.0  -lglib-2.0 -lhighgui -lcv -lcxcore -lcvaux -lcvcam videoInputLib.a -lddraw -ldxguid -lole32 -loleaut32 -lstrmbasd -lstrmbase -lstrmiids -luuid  -lgdkglext-win32-1.0 -lgtkglext-win32-1.0  -lglut32 -lglu32 -lopengl32 -lglaux -lgdi32 -lwinmm  -lgthread-2.0  
+INCS =  -I"include"  -I"C:/Archivos de programa/OpenCV/cxcore/include"  -I"C:/Archivos de programa/OpenCV/cv/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/highgui"  -I"C:/Archivos de programa/OpenCV/cvaux/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/cvcam/include"  -I"c:/gtk/include"  -I"C:/GTK/include/gtk-2.0/"  -I"C:/GTK/include/gtk-2.0/gtk"  -I"C:/GTK/include"  -I"C:/Dev-Cpp/DShow/Include"  -I"C:/Dev-Cpp/lib/gtk-2.0/include"  -I"C:/Dev-Cpp/lib/glib-2.0/include"  -I"C:/Archivos de programa/OpenCV/cxcore/include"  -I"C:/Archivos de programa/OpenCV/cv/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/highgui"  -I"C:/Archivos de programa/OpenCV/cvaux/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/cvcam/include"  -I"C:/Archivos de programa/OpenCV/filters/CalibFilter"  -I"C:/GTK"  -I"C:/GTK/include"  -I"C:/GTK/include/gtk-2.0/"  -I"C:/Dev-Cpp/include/cairo"  -I"C:/Dev-Cpp/include"  -I"C:/GTK/include/gtk-2.0"  -I"C:/Dev-Cpp/include/GL"  -I"C:/GTK/include/gtkglext-1.0"  -I"C:/GTK/lib/gtkglext-1.0/include" 
+CXXINCS =  -I"C:/Archivos de programa/OpenCV/cxcore/include"  -I"C:/Archivos de programa/OpenCV/cv/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/highgui"  -I"C:/Archivos de programa/OpenCV/cvaux/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/cvcam/include"  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include"  -I"c:/gtk/include"  -I"C:/GTK/include/gtk-2.0/"  -I"C:/GTK/include"  -I"C:/GTK/include/gtk-2.0/gtk"  -I"C:/Dev-Cpp/DShow/Include"  -I"C:/Dev-Cpp/lib/gtk-2.0/include"  -I"C:/Dev-Cpp/lib/glib-2.0/include"  -I"C:/Archivos de programa/OpenCV/cxcore/include"  -I"C:/Archivos de programa/OpenCV/cv/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/highgui"  -I"C:/Archivos de programa/OpenCV/cvaux/include"  -I"C:/Archivos de programa/OpenCV/otherlibs/cvcam/include"  -I"C:/Archivos de programa/OpenCV/filters/CalibFilter"  -I"C:/GTK"  -I"C:/GTK/include"  -I"C:/GTK/include/gtk-2.0/"  -I"C:/Dev-Cpp/include/cairo"  -I"C:/Dev-Cpp/include"  -I"C:/GTK/include/gtk-2.0"  -I"C:/Dev-Cpp/include/GL"  -I"C:/GTK/include/gtkglext-1.0"  -I"C:/GTK/lib/gtkglext-1.0/include" 
+BIN  = DemoEstereo.exe
+CXXFLAGS = $(CXXINCS)   -mms-bitfields
+CFLAGS = $(INCS) -I"C:\Dev-Cpp\\include\gtk-2.0"  -I"C:\Dev-Cpp\\include\..\lib\gtk-2.0\include"  -I"C:\Dev-Cpp\\include\atk-1.0"  -I"C:\Dev-Cpp\\include\pango-1.0"  -I"C:\Dev-Cpp\\include\glib-2.0"  -I"C:\Dev-Cpp\\include\..\lib\glib-2.0\include"  -mms-bitfields   -mms-bitfields
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before DemoEstereo.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "DemoEstereo.exe" $(LIBS)
+
+source/config.o: source/config.cpp
+	$(CPP) -c source/config.cpp -o source/config.o $(CXXFLAGS)
+
+source/gui.o: source/gui.cpp
+	$(CPP) -c source/gui.cpp -o source/gui.o $(CXXFLAGS)
+
+source/main.o: source/main.cpp
+	$(CPP) -c source/main.cpp -o source/main.o $(CXXFLAGS)
+
+source/ocv.o: source/ocv.cpp
+	$(CPP) -c source/ocv.cpp -o source/ocv.o $(CXXFLAGS)
+
+source/ogl.o: source/ogl.cpp
+	$(CPP) -c source/ogl.cpp -o source/ogl.o $(CXXFLAGS)
+
+source/svapi.o: source/svapi.cpp
+	$(CPP) -c source/svapi.cpp -o source/svapi.o $(CXXFLAGS)
+
+source/wrapper.o: source/wrapper.cpp
+	$(CPP) -c source/wrapper.cpp -o source/wrapper.o $(CXXFLAGS)
