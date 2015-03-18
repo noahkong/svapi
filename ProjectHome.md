@@ -1,0 +1,1 @@
+SVAPI is a stereovision library developed for a low cost stereovision system, created for my final career project "Sistema estereoscòpic de baix cost" (Low cost stereoscopic system) at the Universitat de les Illes Balears (UIB) (Spain).
